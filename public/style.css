@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 24px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.forgot {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #5a67d8;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.google {
+  background: #fff;
+}
+
+.facebook {
+  background: #1877f2;
+  color: white;
+  border: none;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register a {
+  color: #667eea;
+  text-decoration: none;
+}

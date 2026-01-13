@@ -1,0 +1,142 @@
+/* ===============================
+   MENU SECTIONS
+================================ */
+.menu-sections {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* SECTION */
+.menu-section {
+  margin-bottom: 120px;
+}
+
+.menu-section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* GRID */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 80px;
+}
+
+/* ITEM */
+.menu-item {
+  margin-bottom: 30px;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 6px;
+}
+
+.menu-item-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.menu-item-header span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.menu-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-section-title {
+    font-size: 32px;
+  }
+}
+/* ===============================
+   LAYOUT
+================================ */
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 60px;
+}
+
+/* LEFT */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* MENU ITEM */
+.menu-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+}
+
+.menu-item:hover h3 {
+  color: #fbbf24;
+}
+
+/* RIGHT PREVIEW */
+.menu-preview-fixed {
+  position: sticky;
+  top: 120px;
+}
+
+.menu-preview-image {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  transition: background-image 0.5s ease;
+}
+
+.menu-preview-text {
+  margin-top: 22px;
+}
+
+.menu-preview-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.menu-preview-text p {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-preview-fixed {
+    display: none;
+  }
+}

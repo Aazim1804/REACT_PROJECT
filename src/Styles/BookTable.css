@@ -1,0 +1,259 @@
+.booking-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #0b0b0b;
+  color: #eaeaea;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* LEFT — EXPERIENCE */
+.booking-experience {
+  padding: 140px 90px;
+}
+
+.booking-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.booking-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 30px 0 24px;
+  color: #d4af37;
+}
+
+/* GOLD DIVIDER */
+.booking-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(212,175,55,0.6);
+  margin-bottom: 28px;
+}
+
+.booking-intro {
+  font-size: 18px;
+  line-height: 1.9;
+  max-width: 520px;
+  opacity: 0.8;
+}
+
+.booking-notes {
+  margin-top: 46px;
+  font-size: 14px;
+  line-height: 2.2;
+  opacity: 0.75;
+}
+
+.booking-footnote {
+  margin-top: 24px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* CENTER — FORM (unchanged visually, only font harmony) */
+.booking-form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.03);
+  padding: 46px;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  font-family: "Inter", sans-serif;
+}
+
+.form-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* RIGHT — VISUAL (unchanged) */
+.booking-visual {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1528605248644-14dd04022da1");
+  background-size: cover;
+  background-position: center;
+}
+
+.booking-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11,11,11,0.65),
+    rgba(11,11,11,0.9)
+  );
+}
+
+.booking-visual-text {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  max-width: 320px;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .booking-page {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-visual {
+    display: none;
+  }
+
+  .booking-experience {
+    text-align: center;
+    padding: 100px 40px;
+  }
+
+  .booking-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ===============================
+   FORM HARD RESET (FINAL FIX)
+================================ */
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #ffffff;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Remove browser styling */
+.booking-form input,
+.booking-form textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Date & time icon fix */
+.booking-form input[type="date"]::-webkit-calendar-picker-indicator,
+.booking-form input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Placeholder */
+.booking-form ::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Textarea fix */
+.booking-form textarea {
+  resize: none;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   GUEST CONTROL FIX
+================================ */
+
+.guest-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.guest-control button {
+  all: unset;
+  cursor: pointer;
+  font-size: 22px;
+  color: #d4af37;
+  line-height: 1;
+}
+
+.guest-control span {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   SUBMIT BUTTON (LUXURY)
+================================ */
+
+.booking-submit {
+  margin-top: 34px;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #d4af37, #bfa136);
+  color: #0b0b0b;
+  border: none;
+  border-radius: 999px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(212,175,55,0.35);
+}
+/* ===============================
+   LOCATION SELECT (LUXURY)
+================================ */
+
+.booking-form select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #ffffff;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #d4af37 50%),
+    linear-gradient(135deg, #d4af37 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(1em + 2px),
+    calc(100% - 13px) calc(1em + 2px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.booking-form select option {
+  background: #0b0b0b;
+  color: #ffffff;
+}

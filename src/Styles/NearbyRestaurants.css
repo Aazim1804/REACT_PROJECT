@@ -1,0 +1,165 @@
+/* ---------- Page Background ---------- */
+.nearby-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+      center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  overflow-x: hidden;
+}
+
+/* ---------- Content Wrapper ---------- */
+.nearby-content {
+  width: 100%;
+  max-width: 520px;
+  color: #fff;
+  animation: pageEnter 0.9s ease-out;
+}
+
+/* ---------- Header ---------- */
+.header h2 {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  animation: textReveal 0.8s ease forwards;
+}
+
+.header p {
+  color: #d1d1d1;
+  margin-top: 6px;
+  animation: textReveal 1s ease forwards;
+}
+
+/* ---------- Search Card ---------- */
+.search-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  animation: cardPop 0.6s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.search-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 65px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Button ---------- */
+.btn-success {
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(25, 135, 84, 0.6);
+}
+
+/* ---------- No Results ---------- */
+.no-results {
+  margin-top: 22px;
+  text-align: center;
+  color: #ffc107;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---------- Results List ---------- */
+.results {
+  margin-top: 28px;
+}
+
+/* ---------- Result Card ---------- */
+.result-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  color: #000;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+  animation: resultSlide 0.6s ease forwards;
+  opacity: 0;
+  transform-origin: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.45);
+}
+
+.result-card h5 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.result-card p {
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.result-card span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ---------- Animations ---------- */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes resultSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

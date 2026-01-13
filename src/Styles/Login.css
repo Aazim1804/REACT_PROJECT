@@ -1,0 +1,115 @@
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,5,5,0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.auth-card {
+  width: 420px;
+  background: linear-gradient(180deg, #111, #0a0a0a);
+  border-radius: 22px;
+  padding: 46px;
+  color: #fff;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+.auth-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.auth-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.auth-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin: 14px 0;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 36px;
+}
+
+.auth-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.auth-group label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.auth-group input {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px 14px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.auth-checkbox {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.auth-link {
+  font-size: 12px;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+.auth-primary-btn {
+  width: 100%;
+  padding: 14px;
+  background: #d4af37;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.auth-footer {
+  margin-top: 26px;
+  font-size: 13px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.auth-footer span {
+  color: #d4af37;
+  cursor: pointer;
+}

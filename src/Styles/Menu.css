@@ -1,0 +1,152 @@
+/* ===============================
+   MENU PAGE — EDITORIAL LUXURY
+================================ */
+.menu-page {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #e5e5e5;
+  padding: 120px 60px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* HEADER */
+.menu-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.menu-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 20px 0;
+  color: #d4af37;
+}
+
+.menu-subtitle {
+  max-width: 520px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: auto;
+  align-items: start;
+}
+
+/* LEFT LIST */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.menu-item {
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(6px);
+}
+
+.menu-item:hover h3 {
+  color: #d4af37;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-item h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.menu-price {
+  font-size: 15px;
+  color: #d4af37;
+}
+
+.menu-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-top: 6px;
+  max-width: 420px;
+}
+
+/* ===============================
+   STICKY PREVIEW (FIXED)
+================================ */
+.menu-preview-fixed {
+  position: relative;
+}
+
+.menu-preview-fixed-inner {
+  position: sticky;
+  top: 140px;
+}
+
+.menu-preview-image {
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.menu-preview-text {
+  margin-top: 22px;
+}
+
+.menu-preview-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.menu-preview-text p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1000px) {
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-preview-fixed {
+    display: none;
+  }
+
+  .menu-page {
+    padding: 100px 30px;
+  }
+}
