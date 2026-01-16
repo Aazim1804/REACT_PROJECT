@@ -1,0 +1,126 @@
+.placeorder-page {
+  min-height: 100vh;
+  background: #0b0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px;
+  color: #eaeaea;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.placeorder-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ======================
+   ORDER SUMMARY
+====================== */
+.order-summary {
+  background: rgba(255,255,255,0.03);
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.order-summary h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.order-divider {
+  margin: 30px 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* ======================
+   DELIVERY FORM
+====================== */
+.delivery-form {
+  background: rgba(255,255,255,0.03);
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.delivery-form h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.delivery-form label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  margin-top: 22px;
+}
+
+.delivery-form input,
+.delivery-form textarea {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.delivery-form textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* BUTTON */
+.placeorder-btn {
+  margin-top: 40px;
+  width: 100%;
+  padding: 16px;
+  background: #d4af37;
+  color: #0b0b0b;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.placeorder-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.4);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .placeorder-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}

@@ -1,4 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom"; 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase"; 
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import BookTable from "./components/BookTable";
@@ -10,24 +14,37 @@ import StartersMenu from "./components/StartersMenu";
 import MainCourseMenu from "./components/MainCourseMenu";
 import SeafoodMenu from "./components/SeafoodMenu";
 import DessertsMenu from "./components/DessertsMenu";
-
-
-
-
+import Delivery from "./components/Delivery";
+import Checkout from "./components/Checkout";
+import PlaceOrder from "./components/PlaceOrder";
+import OrderSuccess from "./components/OrderSuccess";
+import Locations from "./components/Locations";
+import Login from "./components/Login"; // Ensure this is imported here
 
 import "./App.css";
 
-
-
 function App() {
+  const [user, setUser] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <>
-      <Navbar /> 
+      <Navbar user={user} setShowLogin={setShowLogin} /> 
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route 
+          path="/" 
+          element={<Home user={user} setShowLogin={setShowLogin} />} 
+        />
         <Route path="/book-table" element={<BookTable />} />
         <Route path="/nearby" element={<NearbyRestaurants />} />
-        {/* RS5: Secure Admin Login leads here */}
         <Route path="/admin-dashboard" element={<Admin_Dashboard />} />
         <Route path="/admin/manage-menu" element={<ManageMenu />} />
         <Route path="/view-menus" element={<MenuExperience />} />
@@ -35,8 +52,17 @@ function App() {
         <Route path="/menu/mains" element={<MainCourseMenu />} />
         <Route path="/menu/seafood" element={<SeafoodMenu />} />
         <Route path="/menu/desserts" element={<DessertsMenu />} />
-        <Route path="/menu/desserts" element={<DessertsMenu />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/checkout" element={<Checkout />} /> 
+        <Route path="/place-order" element={<PlaceOrder />} /> 
+        <Route path="/order-success" element={<OrderSuccess />} />
       </Routes>
+
+      {/* Global Login Modal Trigger */}
+      {showLogin && (
+        <Login onClose={() => setShowLogin(false)} />
+      )}
     </>
   );
 }

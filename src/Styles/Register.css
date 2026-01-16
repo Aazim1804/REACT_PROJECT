@@ -1,0 +1,32 @@
+.auth-divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 0.8rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #333;
+  margin: 0 10px;
+}
+.social-auth-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+}
+.social-btn:hover {
+  border-color: #d4af37; /* Gold glow on hover */
+  background: rgba(212, 175, 55, 0.05);
+}

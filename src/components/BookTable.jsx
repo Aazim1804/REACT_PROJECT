@@ -39,11 +39,13 @@ const BookTable = () => {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             >
-              <option value="">Choose a RestoCabana location</option>
-              <option value="downtown">RestoCabana – Downtown</option>
-              <option value="beachside">RestoCabana – Beachside</option>
-              <option value="uptown">RestoCabana – Uptown</option>
-              <option value="heritage">RestoCabana – Heritage Square</option>
+              <option value="">Choose a location</option>
+              <option value="downtown">RestoCabana – The Azure Coast</option>
+              <option value="beachside">RestoCabana – Golden Hour Atrium</option>
+              <option value="uptown">RestoCabana – The Ivy Veranda</option>
+              <option value="heritage">RestoCabana – The Obsidian Peak</option>
+              <option value="heritage">RestoCabana – Sakura Pavilion</option>
+              <option value="heritage">RestoCabana – The Velvet Loft</option>
             </select>
           </div>
 

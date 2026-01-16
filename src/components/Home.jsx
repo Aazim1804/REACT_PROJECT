@@ -1,8 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../Styles/Home.css";
 
-const Home = () => {
+const Home = ({ user, setShowLogin }) => {
+  const navigate = useNavigate();
+
+  // Function to intercept navigation and check auth state
+  const handleProtectedAction = (path) => {
+    if (user) {
+      navigate(path);
+    } else {
+      // If not logged in, trigger the login modal
+      setShowLogin(true);
+    }
+  };
+
   return (
     <div className="home-container">
 
@@ -17,14 +29,33 @@ const Home = () => {
           </h1>
 
           <div className="hero-buttons">
-            <Link to="/book-table" className="hero-btn">Book a Table</Link>
-            <Link to="/view-menus" className="hero-btn">Main Menu</Link>
-            <Link to="/view-menus" className="hero-btn">Set Menus</Link>
-            <Link to="/book-table" className="hero-btn">Functions</Link>
+            {/* These use buttons instead of direct Links for logic control */}
+            <button 
+              onClick={() => handleProtectedAction("/book-table")} 
+              className="hero-btn"
+            >
+              Book a Table
+            </button>
+
+            <button 
+              onClick={() => handleProtectedAction("/view-menus")} 
+              className="hero-btn"
+            >
+              Main Menu
+            </button>
+
+            <button 
+              onClick={() => handleProtectedAction("/delivery")} 
+              className="hero-btn"
+            >
+              Order
+            </button>
+
+            
           </div>
 
           <p className="hero-footer-text">
-            Dine in and carry out now available in all locations
+            Dine in, delivery, and carry out now available in all locations
           </p>
         </div>
       </section>
@@ -71,7 +102,7 @@ const Home = () => {
         {[
           {
             name: "Italian Truffle Pasta",
-            img: "https://images.unsplash.com/photo-1729875746931-c5edc5ec6468?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "https://images.unsplash.com/photo-1729875746931-c5edc5ec6468?q=80&w=1470&auto=format&fit=crop",
           },
           {
             name: "Sun Salted Branzino",

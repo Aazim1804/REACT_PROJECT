@@ -183,3 +183,27 @@
     grid-template-columns: 1fr;
   }
 }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit; /* Ensures it uses your luxury font */
+}
+
+.hero-btn:hover {
+  background: #d4af37;
+  color: #000;
+}
